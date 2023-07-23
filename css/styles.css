@@ -18,6 +18,13 @@ a .underline:focus,
 a .underline:hover {
   opacity: 1;
 }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* загальні вимоги до тегів */
 .container {
   max-width: 1158px;
@@ -47,6 +54,8 @@ img {
 }
 
 ul {
+  display: flex;
+  gap: 24px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -60,6 +69,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--dark);
   background-color: var(--white);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 /* скритий h1 на portfolio*/
@@ -103,6 +116,17 @@ body {
   margin-bottom: 8px;
 }
 /* загальні @MEDIA */ /* загальні @MEDIA */ /* загальні @MEDIA */ /* загальні @MEDIA */
+/* @media screen and (max-width: 499px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 499px) {
+  .container {
+    width: 500px;
+  }
+} */
 
 @media screen and (max-width: 767px) {
   .container {
@@ -116,7 +140,7 @@ body {
 
 @media screen and (min-width: 767px) {
   .container {
-    width: 736px;
+    width: 768px;
   }
   .images_section_portfolio {
     padding: 64px 0;
@@ -153,6 +177,7 @@ body {
 /* Область хедера */
 
 .header {
+  box-sizing: border-box;
   border-bottom: 1px solid var(--accent);
   width: 100%;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -203,7 +228,7 @@ header .container {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  padding: 27px 0;
+  padding: 24px 0;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -283,12 +308,10 @@ header .container {
     margin-right: 120px;
     margin-left: 0;
   }
-  .header-container {
-    padding: 16px 0;
-  }
 
-  .nav-list {
-    padding: 8px 0px;
+  .address-list {
+    gap: 12px;
+    padding: 9px;
   }
 }
 
@@ -308,8 +331,9 @@ header .container {
   }
 
   .address-list-items {
-    padding: 24px 0;
+    padding: 12.5px 0;
     flex-direction: row;
+    gap: 20px;
   }
 
   .header-navigation-address .connect {
@@ -344,11 +368,10 @@ header .container {
   background-position: center;
   background-size: cover;
 
-  max-width: 1440px;
-  max-height: 600px;
+  width: 100%;
 
-  padding-bottom: 188px;
-  padding-top: 188px;
+  padding-bottom: 112px;
+  padding-top: 112px;
   margin: 0 auto;
 }
 
@@ -364,7 +387,7 @@ header .container {
   color: var(--white);
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
 
@@ -376,7 +399,6 @@ header .container {
 
   min-width: 169px;
   padding: 16px 32px;
-  margin-top: 48px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -441,9 +463,9 @@ header .container {
 }
 
 @media screen and (min-width: 1439px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-width: 1200px) and (min-resolution: 192dpi),
-  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  screen and (min-width: 1439px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1439px) and (min-resolution: 192dpi),
+  screen and (min-width: 1439px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -460,6 +482,14 @@ header .container {
   .h-hero {
     text-transform: capitalize;
   }
+  .hero {
+    /* max-width: 428px; */
+    max-height: 432px;
+  }
+
+  .main_button {
+    margin-top: 72px;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -469,9 +499,28 @@ header .container {
     letter-spacing: 0.02em;
     max-width: 496px;
   }
+
+  .hero {
+    /* max-width: 768px; */
+    max-height: 436px;
+  }
+
+  .main_button {
+    margin-top: 36px;
+  }
 }
 
 @media screen and (min-width: 1439px) {
+  .hero {
+    max-width: 1440px;
+    max-height: 600px;
+    padding-bottom: 188px;
+    padding-top: 188px;
+  }
+
+  .main_button {
+    margin-top: 48px;
+  }
 }
 
 /* cекція 2 опис та 3 картинки*/
@@ -480,37 +529,79 @@ header .container {
 .discription-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+
+.section-c {
+  display: none;
 }
 
 .description-icons-div {
   background-color: var(--light);
   height: 112px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
-.discription-list-items {
-  min-width: 264px;
-  width: calc((100% - 72px) / 4);
-}
-
-.discription-list-img-items {
-  width: calc((100% - 48px) / 3);
+.desc-three {
+  text-align: center;
 }
 
 .desc-p {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--text);
+  max-width: 450px;
 }
 
-/* секція команди */
+/* Section 2 @MEDIA */ /* Section 2 @MEDIA */ /* Section 2 @MEDIA */
+@media screen and (min-width: 767px) {
+  .discription-list-img,
+  .discription-list {
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 72px;
+  }
+  .desc-three {
+    text-align: start;
+  }
+  .discription-list-items {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .section-c {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .description-icons-div {
+    display: flex;
+  }
+
+  .discription-list-items {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .discription-list-img-items {
+    width: calc((100% - 48px) / 3);
+  }
+}
+/* секція команди */ /* секція команди */ /* секція команди */ /* секція команди */
+
+.team-cards-list {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
 
 .team-icon {
   display: flex;
@@ -545,14 +636,7 @@ header .container {
   background-color: var(--light);
 }
 
-.team-cards {
-  max-width: 264px;
-}
-
 .team-cards-items {
-  max-width: 264px;
-  width: calc((100% - 72px) / 4);
-
   text-align: center;
 
   background: var(--white);
@@ -568,18 +652,42 @@ header .container {
 .team-cards-text {
   padding: 32px 0px;
 }
+
+.team-names {
+  text-align: center;
+}
+
+/* team section @media */ /* team section @media */ /* team section @media */
+
+@media screen and (min-width: 767px) {
+  .team-cards-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .team-cards-items {
+    max-width: 264px;
+    width: calc((100% - 72px) / 4);
+  }
+}
+
+/* Customers section  */ /* Customers section  */ /* Customers section  */ /* Customers section  */
+
+.customer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .customer-links {
   color: var(--subtle-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
-
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -587,7 +695,7 @@ header .container {
 .customers {
   fill: currentColor;
 
-  width: 168px;
+  min-width: 190px;
   height: 88px;
   padding: 16px 32px;
   justify-content: center;
@@ -609,34 +717,71 @@ header .container {
 
 .customers-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  row-gap: 72px;
 }
 
 .customers-list-items {
-  position: relative;
   display: flex;
-  height: 88px;
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16) / 2);
 }
 
-/* футер */
+/*  Customers @MEDIA*/ /*  Customers @MEDIA*/ /*  Customers @MEDIA*/ /*  Customers @MEDIA*/
+
+@media screen and (max-width: 767px) {
+  .customers {
+    min-width: 190px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .customer-container {
+    width: 650px;
+  }
+  .customers {
+    min-width: 168px;
+  }
+
+  .customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .customers-list-items {
+    position: relative;
+    display: flex;
+    height: 88px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .customer-container {
+    width: 100%;
+  }
+
+  .customers-list-items {
+    height: 88px;
+    width: calc((100% - 120px) / 6);
+  }
+}
+/* футер */ /* футер */ /* футер */ /* футер */ /* футер */ /* футер */
 .footer {
   background-color: var(--dark);
   color: var(--light);
-
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 96px 15px;
 }
 
-.logo-text {
-  margin-right: 120px;
-}
-
-.footer,
 .footer-div {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 72px;
 }
 
 .footer-p {
@@ -646,6 +791,7 @@ header .container {
   color: var(--white-background);
 
   width: 264px;
+  text-align: start;
 }
 
 .social-media-paragraph {
@@ -709,10 +855,6 @@ header .container {
   fill: var(--modal-background);
 }
 
-.subscribe-form {
-  margin-left: 80px;
-}
-
 .subscribe-form-text {
   margin-bottom: 16px;
 
@@ -752,6 +894,8 @@ header .container {
 
 .subscribe-input-form {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -765,7 +909,7 @@ header .container {
   justify-content: center;
   align-items: center;
 
-  min-width: 165px;
+  max-width: 165px;
   padding: 8px 24px;
 
   color: var(--white);
@@ -799,6 +943,49 @@ header .container {
   transform: translate(500%, -1000%);
   opacity: 0;
   /* fill: var(--primary-brand); */
+}
+/* Footer @MEDIA */ /* Footer @MEDIA */ /* Footer @MEDIA */ /* Footer @MEDIA */
+
+@media screen and (max-width: 767px) {
+  .footer-div {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .subscribe-input-form {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .subscribe-input-button {
+    max-width: 165px;
+  }
+
+  .footer {
+    padding: 96px 0;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .footer {
+    padding-left: 0;
+  }
+
+  .footer-div {
+    flex-wrap: nowrap;
+    gap: 0px;
+    row-gap: 0px;
+  }
+
+  .subscribe-form {
+    margin-left: 80px;
+  }
+
+  .logo-text {
+    margin-right: 120px;
+  }
 }
 
 /* кнопки з portfolio.html */
@@ -868,8 +1055,6 @@ header .container {
 .images-block-big-list .overlay {
   position: relative;
   overflow: hidden;
-  max-width: 396px;
-  max-height: 280px;
 }
 
 .images-block-big-list .overlay-p {
@@ -882,7 +1067,6 @@ header .container {
   color: var(--light);
   background-color: var(--primary-brand);
   height: 100%;
-  width: 396px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -891,6 +1075,9 @@ header .container {
   display: flex;
   row-gap: 48px;
   column-gap: 24px;
+}
+
+.images-block-big:not(:last-child) {
   justify-content: center;
 }
 
@@ -923,11 +1110,25 @@ header .container {
   border: 1px solid var(--accent);
   border-top: none;
 }
+
+.portfolio-h3 {
+  color: var(--dark);
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+
+  margin-bottom: 8px;
+  text-align: start;
+}
 /* porfolio-images @MEDIA */ /* porfolio-images @MEDIA */ /* porfolio-images @MEDIA */
 
 @media screen and (max-width: 767px) {
   .images-block-big {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -946,6 +1147,11 @@ header .container {
   .images-block-big-list {
     width: calc((100% - 24px) / 2);
   }
+
+  .image-portfolio {
+    width: 356px;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 1439px) {
@@ -955,7 +1161,7 @@ header .container {
   }
 
   .images-block-big {
-    column-gap: 48px;
+    row-gap: 48px;
   }
 
   .images-block-big-list {
@@ -965,9 +1171,14 @@ header .container {
   .images_section_portfolio {
     padding: 96px 0 120px 0;
   }
+
+  .image-portfolio {
+    width: 360px;
+    height: 300px;
+  }
 }
 
-/* Модальне вікно */
+/* Модальне вікно */ /* Модальне вікно */ /* Модальне вікно */ /* Модальне вікно */ /* Модальне вікно */
 
 .backdrop {
   position: fixed;
@@ -1001,9 +1212,9 @@ header .container {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 16px 16px;
 
-  min-width: 408px;
+  min-width: 392px;
   min-height: 584px;
 
   background: var(--modal-background);
@@ -1208,4 +1419,19 @@ header .container {
   background-color: var(--pressed-state);
   border: none;
   fill: var(--white-background);
+}
+
+/* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 767px) {
+  .modal {
+    min-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
 }
