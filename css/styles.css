@@ -20,18 +20,18 @@ a .underline:hover {
 }
 /* загальні вимоги до тегів */
 .container {
-  width: 1158px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .section-c {
   padding-top: 0;
-  padding-bottom: 120px;
+  padding-bottom: 96px;
 }
 
 h1,
@@ -47,12 +47,8 @@ img {
 }
 
 ul {
-  display: flex;
-  gap: 24px;
-
   padding: 0;
   margin: 0;
-
   list-style-type: none;
 }
 
@@ -60,13 +56,8 @@ ul {
   text-decoration: none;
 }
 
-.list {
-  padding-left: 0;
-}
-
 body {
   font-family: "Roboto", sans-serif;
-
   color: var(--dark);
   background-color: var(--white);
 }
@@ -111,6 +102,53 @@ body {
 
   margin-bottom: 8px;
 }
+/* загальні @MEDIA */ /* загальні @MEDIA */ /* загальні @MEDIA */ /* загальні @MEDIA */
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+
+  .images_section_portfolio {
+    padding: 48px 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    width: 736px;
+  }
+  .images_section_portfolio {
+    padding: 64px 0;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .container {
+    width: 1158px;
+  }
+
+  .section {
+    padding: 120px 0;
+  }
+
+  .section-c {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+  .section {
+    padding: 120px 0;
+  }
+
+  .section-c {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+
+  .images_section_portfolio {
+    padding: 100px 0;
+  }
+}
 
 /* Область хедера */
 
@@ -141,8 +179,6 @@ header .container {
   text-transform: uppercase;
 
   color: var(--primary-brand);
-
-  margin-right: 76px;
 }
 
 .web_logo {
@@ -185,29 +221,22 @@ header .container {
 .header-navigation-address {
   align-items: center;
   position: relative;
-
   font-style: normal;
 }
 
 .address-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: right;
-}
-
-.address-list-items {
-  padding: 24px 0;
 }
 
 .header-navigation-address .connect {
   position: relative;
 
   color: var(--text);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -233,18 +262,74 @@ header .container {
   background-color: var(--pressed-state);
 }
 
+/* HEADER @MEDIA */
+
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
+
+  .address-list {
+    display: none;
+  }
+
+  .header-container {
+    padding: 16px 25px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .logo {
+    margin-right: 120px;
+    margin-left: 0;
+  }
+  .header-container {
+    padding: 16px 0;
+  }
+
+  .nav-list {
+    padding: 8px 0px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .logo {
+    margin-right: 76px;
+  }
+
+  .header-container {
+    padding: 0;
+  }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: right;
+  }
+
+  .address-list-items {
+    padding: 24px 0;
+    flex-direction: row;
+  }
+
+  .header-navigation-address .connect {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
 /* Hero секція */
 /* h1 на hiro секції */
 .h-hero {
   color: var(--white);
-  font-size: 56px;
+  font-size: 36px;
   text-align: center;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-
-  max-width: 496px;
+  max-width: 320px;
 }
 
 .hero {
@@ -260,9 +345,11 @@ header .container {
   background-size: cover;
 
   max-width: 1440px;
+  max-height: 600px;
 
   padding-bottom: 188px;
   padding-top: 188px;
+  margin: 0 auto;
 }
 
 .hero-container {
@@ -298,6 +385,93 @@ header .container {
 .main_button:hover {
   background: var(--pressed-state);
   cursor: pointer;
+}
+
+/* HERO IMAGE */ /* HERO IMAGE */ /* HERO IMAGE */
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../adaptive-images/office-2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../adaptive-images/office-1.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../adaptive-images/office-tab-2.jpg);
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .hero {
+    padding: 200px 0;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../adaptive-images/office-desc-1.jpg);
+  }
+}
+
+@media screen and (min-width: 1439px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../adaptive-images/office-desc-2.jpg);
+  }
+}
+
+/* Hero section @MEDIA */ /* Hero section @MEDIA */ /* Hero section @MEDIA */
+
+@media screen and (max-width: 767px) {
+  .h-hero {
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .h-hero {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
 }
 
 /* cекція 2 опис та 3 картинки*/
@@ -630,8 +804,7 @@ header .container {
 /* кнопки з portfolio.html */
 .nav-buttons-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+  gap: 24px;
 }
 
 .nav-buttons {
@@ -648,8 +821,7 @@ header .container {
   border-radius: 4px;
   border: 1px solid var(--accent);
 
-  height: 48px;
-  padding: 12px 24px;
+  padding: 8px 16px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -667,12 +839,37 @@ header .container {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* кнопки з portfolio.html @MEDIA */ /* кнопки з portfolio.html @MEDIA */ /* кнопки з portfolio.html @MEDIA */
+@media screen and (max-width: 767px) {
+  .nav-buttons-list {
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav-buttons-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+  .nav-buttons {
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .nav-buttons-list {
+    margin-bottom: 72px;
+  }
+}
+
 /* секція з картинками на partfolio.html */
 .images-block-big-list .overlay {
   position: relative;
   overflow: hidden;
-  width: 360px;
-  height: 300px;
+  max-width: 396px;
+  max-height: 280px;
 }
 
 .images-block-big-list .overlay-p {
@@ -685,14 +882,13 @@ header .container {
   color: var(--light);
   background-color: var(--primary-brand);
   height: 100%;
-  width: 100%;
+  width: 396px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .images-block-big {
   display: flex;
-  flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
   justify-content: center;
@@ -700,7 +896,6 @@ header .container {
 
 .images-block-big-list {
   background: var(--white);
-  width: calc((100% - 48px) / 3);
 }
 
 .images-block-big-link {
@@ -728,9 +923,48 @@ header .container {
   border: 1px solid var(--accent);
   border-top: none;
 }
+/* porfolio-images @MEDIA */ /* porfolio-images @MEDIA */ /* porfolio-images @MEDIA */
 
-.images_section_portfolio {
-  padding: 96px 0 120px 0;
+@media screen and (max-width: 767px) {
+  .images-block-big {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .images-block-big-list .overlay {
+    width: 356px;
+    height: 300px;
+  }
+
+  .images-block-big {
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .images-block-big-list {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .images-block-big-list .overlay {
+    width: 360px;
+    height: 300px;
+  }
+
+  .images-block-big {
+    column-gap: 48px;
+  }
+
+  .images-block-big-list {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .images_section_portfolio {
+    padding: 96px 0 120px 0;
+  }
 }
 
 /* Модальне вікно */
