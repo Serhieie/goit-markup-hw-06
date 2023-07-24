@@ -734,6 +734,9 @@ header .container {
 
 .desc-three {
   text-align: center;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .desc-p {
@@ -745,6 +748,30 @@ header .container {
 }
 
 /* Section 2 @MEDIA */ /* Section 2 @MEDIA */ /* Section 2 @MEDIA */
+
+@media screen and (max-width: 767px) {
+  .desc-three {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02;
+  }
+}
+@media screen and (min-width: 767px) {
+  .discription-list-img,
+  .discription-list {
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 72px;
+  }
+  .desc-three {
+    text-align: start;
+  }
+  .discription-list-items {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
 @media screen and (min-width: 767px) {
   .discription-list-img,
   .discription-list {
@@ -958,7 +985,7 @@ header .container {
 .footer {
   background-color: var(--dark);
   color: var(--light);
-  padding: 96px 15px;
+  padding: 96px 0;
 }
 
 .footer-div {
@@ -1613,16 +1640,14 @@ header .container {
 }
 
 /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .subscribe-input {
+    min-width: 398px;
+  }
 }
-
 @media screen and (min-width: 767px) {
   .modal {
     min-width: 408px;
     padding: 72px 24px 24px 24px;
   }
-}
-
-@media screen and (min-width: 1439px) {
 }
