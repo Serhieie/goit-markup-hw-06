@@ -333,6 +333,9 @@ header .container {
   padding: 6px;
   border-radius: 50%;
   opacity: 0.4;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-close:hover .close-menu-icon {
@@ -382,6 +385,7 @@ header .container {
 
 .nav-link-mobile {
   color: var(--dark);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mob-nav-list-items:focus .nav-link-mobile,
@@ -397,6 +401,7 @@ header .container {
   gap: 40px;
 }
 .mobile-address-links {
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--text);
   font-size: 20px;
   font-style: normal;
