@@ -1270,6 +1270,11 @@ header .container {
 }
 
 /* секція з картинками на partfolio.html */
+.image-portfolio {
+  width: 100%;
+  max-width: 396px;
+}
+
 .images-block-big-list .overlay {
   position: relative;
   overflow: hidden;
