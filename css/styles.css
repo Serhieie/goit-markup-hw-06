@@ -996,6 +996,7 @@ header .container {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 72px;
+  width: 575px;
 }
 
 .footer-p {
@@ -1194,6 +1195,7 @@ header .container {
     flex-wrap: nowrap;
     gap: 0px;
     row-gap: 0px;
+    width: 100%;
   }
 
   .subscribe-form {
