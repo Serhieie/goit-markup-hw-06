@@ -996,7 +996,6 @@ header .container {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 72px;
-  width: 575px;
 }
 
 .footer-p {
@@ -1180,7 +1179,9 @@ header .container {
   .subscribe-input-button {
     max-width: 165px;
   }
-
+  .footer-div {
+    width: 575px;
+  }
   .footer {
     padding: 96px 0;
   }
