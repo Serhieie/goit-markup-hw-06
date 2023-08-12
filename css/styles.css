@@ -1085,15 +1085,12 @@ header .container {
   width: 264px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--white, rgba(0, 0, 0, 0.15));
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 253, 253, 0.3);
   flex-shrink: 0;
   background-color: transparent;
   padding-left: 16px;
   padding-right: 16px;
   color: var(--white);
-
-  opacity: 0.3;
 
   font-size: 12px;
   font-weight: 400;
@@ -1112,6 +1109,7 @@ header .container {
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.04em;
+  opacity: 0.6;
 }
 
 .subscribe-input-form {
@@ -1213,6 +1211,11 @@ header .container {
   }
 
   .subscribe-input {
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .subscribe-input::placeholder {
     opacity: 1;
   }
 }
