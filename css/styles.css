@@ -1085,7 +1085,7 @@ header .container {
   width: 264px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--white, #fff);
+  border: 1px solid var(--white, rgba(0, 0, 0, 0.15));
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
   background-color: transparent;
@@ -1093,12 +1093,17 @@ header .container {
   padding-right: 16px;
   color: var(--white);
 
+  opacity: 0.3;
+
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.04em;
-
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscribe-input:focus {
+  opacity: 1;
 }
 
 .subscribe-input::placeholder {
@@ -1205,6 +1210,10 @@ header .container {
 
   .logo-text {
     margin-right: 120px;
+  }
+
+  .subscribe-input {
+    opacity: 1;
   }
 }
 
