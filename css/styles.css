@@ -405,10 +405,10 @@ header .container {
   letter-spacing: 0.02em;
 }
 
-.mobile-address-list-items:focus .mobile-address-links,
-.mobile-address-list-items:hover .mobile-address-links {
-  color: var(--primary-brand);
-  font-size: 36px;
+.mobile-menu-phone {
+  color: var(--iris, #4d5ae5);
+  /* Header 2 */
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -449,21 +449,26 @@ header .container {
   .social-media-list-mobile {
     gap: 16px;
   }
-
-  .mobile-address-list-items:focus .mobile-address-links,
-  .mobile-address-list-items:hover .mobile-address-links {
-    font-size: 22px;
+  .nav-link-mobile {
+    font-size: 26px;
   }
 }
 
-@media screen and (min-width: 325px) and (max-width: 427px) {
+@media screen and (min-width: 319px) and (max-width: 427px) {
   .social-media-list-mobile {
     gap: 16px;
   }
-
-  .mobile-address-list-items:focus .mobile-address-links,
-  .mobile-address-list-items:hover .mobile-address-links {
+  .mobile-menu-phone {
     font-size: 26px;
+  }
+  .nav-link-mobile {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 427px) {
+  .mobile-menu-phone {
+    font-size: 36px;
   }
 }
 
@@ -1085,6 +1090,7 @@ header .container {
   flex-shrink: 0;
   background-color: transparent;
   padding-left: 16px;
+  padding-right: 16px;
   color: var(--white);
 
   font-size: 12px;
@@ -1500,6 +1506,7 @@ header .container {
   background-color: transparent;
 
   padding-left: 38px;
+  padding-right: 12px;
   outline: transparent;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
