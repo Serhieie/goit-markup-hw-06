@@ -443,6 +443,41 @@ header .container {
 
 /* HEADER @MEDIA */
 
+@media screen and (max-height: 520px) {
+  .mobile-menu-container {
+    gap: 10px;
+    flex-wrap: nowrap;
+    padding: 5px 5px 10px 10px;
+  }
+  .social-media-list-mobile {
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  .mobile-address-links {
+    font-size: 15px;
+  }
+
+  .nav-link-mobile {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-navigation-address {
+    margin-bottom: 10px;
+  }
+
+  .mob-nav-list {
+    gap: 15px;
+  }
+  .mobile-address-list {
+    gap: 15px;
+  }
+}
+
 @media screen and (max-width: 324px) {
   .social-media-list-mobile {
     gap: 16px;
