@@ -1711,7 +1711,7 @@ header .container {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
+  overflow: scroll;
   padding: 25px 38px 16px 38px;
 
   min-width: 600px;
@@ -1779,7 +1779,7 @@ header .container {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-
+    overflow: unset;
     padding: 72px 16px 16px 16px;
 
     min-width: 392px;
