@@ -1769,10 +1769,6 @@ header .container {
   }
 }
 
-.current {
-  color: var(--pressed-state);
-}
-
 @media screen and (min-width: 900px) {
   .orientation.landscape-mode {
     position: absolute;
@@ -1814,4 +1810,7 @@ header .container {
   .orientation.landscape-mode .form-checkbox {
     margin-bottom: 24px;
   }
+}
+.current {
+  color: var(--pressed-state);
 }
