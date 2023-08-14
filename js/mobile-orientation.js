@@ -4,10 +4,10 @@ function toggleModalOrientationClass(orientation) {
   if (modal) {
     if (orientation === "landscape") {
       // Add the "landscape-mode" class
-      modal.classList.remove("landscape-mode");
+      modal.classList.add("landscape-mode");
     } else {
       // Remove the "landscape-mode" class if it exists
-      modal.classList.add("landscape-mode");
+      modal.classList.remove("landscape-mode");
     }
   }
 }
