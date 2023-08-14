@@ -1,18 +1,23 @@
-function toggleModalOrientationClass(orientation) {
+// Function to toggle the "landscape-mode" class on the modal
+function toggleModalOrientationClass(isLandscape) {
   const modal = document.querySelector(".orientation");
-
   if (modal) {
-    if (orientation === "landscape") {
-      modal.classList.remove("landscape-mode");
-    } else {
+    if (isLandscape) {
       modal.classList.add("landscape-mode");
+    } else {
+      modal.classList.remove("landscape-mode");
     }
   }
 }
+
+// Function to handle orientation change
 function handleOrientationChange() {
-  const orientation = window.innerWidth > window.innerHeight ? "landscape" : "portrait";
-  toggleModalOrientationClass(orientation);
+  const isLandscape = window.innerWidth > window.innerHeight;
+  toggleModalOrientationClass(isLandscape);
 }
 
-window.addEventListener("orientationchange", handleOrientationChange);
+// Call the orientation change handler initially
 handleOrientationChange();
+
+// Add a listener for the resize event to handle orientation changes
+window.addEventListener("resize", handleOrientationChange);

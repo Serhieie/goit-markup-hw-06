@@ -1772,3 +1772,46 @@ header .container {
 .current {
   color: var(--pressed-state);
 }
+
+@media screen and (min-width: 900px) {
+  .orientation.landscape-mode {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    padding: 72px 16px 16px 16px;
+
+    min-width: 392px;
+    min-height: 584px;
+
+    background: var(--modal-background);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .orientation.landscape-mode .form-inputs {
+    height: 40px;
+  }
+
+  .orientation.landscape-mode .form-textarea-input {
+    height: 120px;
+  }
+
+  .orientation.landscape-mode .form-submit-button {
+    padding: 16px 32px;
+
+    min-width: 169px;
+    height: 56px;
+  }
+  .orientation.landscape-mode .modal-container-text {
+    margin-bottom: 16px;
+  }
+
+  .orientation.landscape-mode .form-checkbox {
+    margin-bottom: 24px;
+  }
+}
