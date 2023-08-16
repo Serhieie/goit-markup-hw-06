@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const category = this.dataset.filter;
       showItems(category);
-      AOS.refresh();
     });
   });
 
