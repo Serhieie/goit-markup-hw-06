@@ -509,15 +509,22 @@ header .container {
   }
 }
 
+@media screen and (max-width: 427px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+}
+@media screen and (min-width: 427px) and (max-width: 767px) {
+  .header-container {
+    padding: 16px 40px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .address-list,
   .nav-list {
     display: none;
-  }
-
-  .header-container {
-    padding: 16px 40px;
-    width: 100%;
   }
 }
 
