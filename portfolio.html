@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -172,10 +173,15 @@
         </div>
       </header>
       <main>
-        <section class="images_section_portfolio section">
+        <section id="section-5" class="images_section_portfolio section">
           <div class="container container-portfolio">
             <h1 class="visually-hidden">Our works</h1>
-            <ul class="nav-buttons-list list">
+            <ul
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              data-aos-delay="50"
+              class="nav-buttons-list list"
+            >
               <li class="nav-buttons-list-item">
                 <button class="nav-buttons" type="button" data-filter="all">All</button>
               </li>
@@ -198,7 +204,12 @@
                 </button>
               </li>
             </ul>
-            <ul class="images-block-big list">
+            <ul
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              data-aos-delay="50"
+              class="images-block-big list"
+            >
               <li class="images-block-big-list filter-item" data-category="app">
                 <a href="./portfolio.html" class="link images-block-big-link">
                   <div class="overlay">
@@ -695,6 +706,11 @@
     <script src="./js/mobile-orientation.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/phone-validation.js"></script>
+    <script type="module" src="./js/anim-inicialization.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="module">
+      AOS.init();
+    </script>
     <script
       defer=""
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

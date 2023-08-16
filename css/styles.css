@@ -32,6 +32,21 @@ a .underline:hover {
   margin: 0 auto;
 }
 
+section {
+  scroll-snap-align: start; /* Snap the scroll to the section start */
+}
+/* Приклад анімації для ефекту "fade-up" */
+[data-aos="fade-up"] {
+  opacity: 0; /* Початковий стан */
+  transform: translateY(20px); /* Початковий стан */
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1; /* Кінцевий стан */
+  transform: translateY(0); /* Кінцевий стан */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Властивості переходу */
+}
+
 .section {
   padding: 96px 0;
 }
