@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Знаходимо елементи, що потрібно сортувати
   const filterItems = document.querySelectorAll(".filter-item");
-  // Знаходимо всі кнопки фільтру
   const filterButtons = document.querySelectorAll(".nav-buttons");
-
-  // Функція для відображення елементів з відповідною категорією
   function showItems(category) {
     filterItems.forEach((item) => {
       if (category === "all" || item.dataset.category === category) {
@@ -15,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Обробник подій для кнопок фільтру
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const category = this.dataset.filter;
@@ -24,6 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Запускаємо відображення всіх елементів при завантаженні сторінки
   showItems("all");
 });
