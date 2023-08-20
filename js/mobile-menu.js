@@ -12,6 +12,7 @@
 
     const scrollLockMethod = !isMenuOpen ? "disableBodyScroll" : "enableBodyScroll";
   };
+  
   const mobileLinkRef = document.querySelector("#menu");
 mobileLinkRef.addEventListener("click", () => {
   mobileMenu.classList.remove("is-open");
