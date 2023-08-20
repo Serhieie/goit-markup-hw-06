@@ -7,6 +7,7 @@ const btnScroll = document.querySelector(".btn-up");
 window.onscroll = () => {
   if (window.scrollY > 600) {
     btnScroll.classList.remove("btn-hidden");
+    btnScroll.classList.remove("btn-up-hidden");
   } else if (window.scrollY < 600) {
     btnScroll.classList.add("btn-hidden");
   }

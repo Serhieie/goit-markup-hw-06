@@ -2160,7 +2160,13 @@ body.no-scroll .logo-container {
   position: fixed;
   bottom: 25px;
   right: 35px;
+  opacity: 1;
 }
+
+.btn-up.btn-up-hidden {
+  opacity: 0;
+}
+
 .btn-hidden {
   opacity: 0;
 }
