@@ -1779,6 +1779,9 @@ body.no-scroll .logo-container {
   top: 16px;
   right: 16px;
 }
+.orientation.landscape-mode body {
+  overflow: hidden;
+}
 
 /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */ /* modal @MEDIA */
 @media screen and (max-width: 390px) {
