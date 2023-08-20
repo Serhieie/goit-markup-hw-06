@@ -273,6 +273,7 @@ body.no-scroll .btn-up {
   display: flex;
   flex-direction: column;
   margin-right: 121px;
+  gap: 40px;
 }
 
 .nav-link {
