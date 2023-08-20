@@ -367,7 +367,6 @@ body.no-scroll .logo-container {
 }
 .header-container {
   padding: 11px 40px;
-  width: 100%;
 }
 .menu-burger-btn.is-open .icon-mobile-close {
   display: flex;
@@ -397,6 +396,10 @@ body.no-scroll .logo-container {
 @media screen and (max-width: 767px) {
   body.no-scroll .container {
     padding: 0;
+  }
+
+  .header-container {
+    width: 100%;
   }
 
   .address-list,
