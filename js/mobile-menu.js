@@ -12,14 +12,14 @@
 
     const scrollLockMethod = !isMenuOpen ? "disableBodyScroll" : "enableBodyScroll";
   };
-  
+
   const mobileLinkRef = document.querySelector("#menu");
-mobileLinkRef.addEventListener("click", () => {
-  mobileMenu.classList.remove("is-open");
-  openMenuBtn.classList.remove("is-open");
-  body.classList.remove("no-scroll")
-  openMenuBtn.setAttribute("aria-expanded",false);
-});
+  mobileLinkRef.addEventListener("click", () => {
+    mobileMenu.classList.remove("is-open");
+    openMenuBtn.classList.remove("is-open");
+    body.classList.remove("no-scroll")
+    openMenuBtn.setAttribute("aria-expanded",false);
+  });
 
   openMenuBtn.addEventListener("click", toggleMenu);
 
