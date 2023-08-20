@@ -351,6 +351,8 @@ body.no-scroll .logo-container {
 .icon-mobile-close {
   display: none;
   stroke: none;
+  width: 8px;
+  height: 8px;
 }
 .menu-burger-btn.is-open .icon-mobile-close {
   display: flex;
@@ -403,6 +405,10 @@ body.no-scroll .logo-container {
 
   .nav-list-container {
     margin-bottom: auto;
+  }
+
+  .current {
+    color: var(--primary-brand);
   }
 }
 
