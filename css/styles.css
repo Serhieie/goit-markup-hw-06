@@ -365,6 +365,10 @@ body.no-scroll .logo-container {
   width: 8px;
   height: 8px;
 }
+.header-container {
+  padding: 11px 40px;
+  width: 100%;
+}
 .menu-burger-btn.is-open .icon-mobile-close {
   display: flex;
 }
@@ -387,10 +391,6 @@ body.no-scroll .logo-container {
   .menu-burger-btn.is-open {
     right: 40px;
     top: 24px;
-  }
-  .header-container {
-    padding: 16px 40px;
-    width: 100%;
   }
 }
 
