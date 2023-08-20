@@ -1689,13 +1689,13 @@ body.no-scroll .logo-container {
 
 .modal-btn {
   position: absolute;
-  top: -12px;
-  right: -12px;
+  top: -8px;
+  right: -8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
