@@ -15,14 +15,4 @@ thxBtn.addEventListener("click", () => {
   thxContainder.classList.remove("is-open");
   hhero.classList.remove("is-hidden")
   document.body.classList.remove("modal-open")
-
-
-  
-  // window.onscroll = () => {
-  //   if (window.scrollY > 300) {
-  //     thxContainder.classList.remove("at-the-top");
-  //   } else if (window.scrollY < 300) {
-  //     thxContainder.classList.add("at-the-top");
-  //   }
-  // };
 });
