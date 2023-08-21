@@ -63,6 +63,8 @@ body {
 
 body.modal-open {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 body.modal-open .menu-burger-btn {
@@ -70,6 +72,8 @@ body.modal-open .menu-burger-btn {
 }
 body.no-scroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 /* скритий h1 на portfolio*/
